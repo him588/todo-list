@@ -2,6 +2,7 @@ import React from "react";
 import "./container.css";
 
 function Container({ text, handledelete, handleedit, id }) {
+  const edit_btn = document.querySelector(".edit");
   return (
     <div className="container_box">
       <p>{text}</p>
