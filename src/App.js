@@ -17,7 +17,9 @@ function App() {
   function handledelete(id) {
     const newlist = todoitem.filter((text) => {
       if (text.id !== id) {
-        return text;
+        return true;
+      } else {
+        return false;
       }
     });
     settodoitem(newlist);
@@ -25,7 +27,9 @@ function App() {
   function handleedit(id) {
     const selecttext = todoitem.find((text) => {
       if (text.id === id) {
-        return text;
+        return true;
+      } else {
+        return false;
       }
     });
     newentry(selecttext);
